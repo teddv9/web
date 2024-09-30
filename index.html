@@ -3,6 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("mobile-nav");
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "flex";
+            }
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Designer Based in Indonesia</title>
     <style>
@@ -184,6 +194,21 @@
         }
 
         @media (max-width: 768px) {
+
+            .menu-icon {
+                display: block;
+            }
+
+            #mobile-nav {
+                display: flex;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: var(--background-color);
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
             nav {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -246,16 +271,32 @@
             font-weight: bold;
             background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
         }
+
+        .menu-icon {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #mobile-nav {
+            display: none;
+            flex-direction: column;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                ☰
+            </div>
+            <nav id="mobile-nav">
                 <a href="#home">HOME</a>
                 <a href="#about">ABOUT</a>
-                <div class="logo"></div>
                 <a href="#works">WORKS</a>
                 <a href="#contact">CONTACT</a>
             </nav>

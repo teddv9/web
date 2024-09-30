@@ -136,6 +136,52 @@
             justify-content: center;
             border: 2px solid var(--hero-text);
         }
+
+        .about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .profile-section {
+            width: 250px;
+        }
+
+        .about-me-text {
+            color: var(--text-color);
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            overflow: hidden;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            width: 60%;
+        }
+
+        .about-text p {
+            margin: 0;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
     </style>
 </head>
 
@@ -172,6 +218,20 @@
                         <span>Branding Project</span>
                         <a href="#" class="button">→</a>
                     </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="profile-section">
+                    <span class="about-me-text">About Me</span>
+                    <div class="profile-pic">
+                        <img src="profile.png" alt="Profile Picture">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Hi, I'm Donnie and I am passionate about everything that has to do with Digital Design and Art
+                        Direction. I enjoy working with agencies and enthusiastic people who want to solve problems
+                        through beautiful designs and experiences.</p>
                 </div>
             </section>
         </main>

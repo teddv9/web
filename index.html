@@ -90,6 +90,52 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .project {
+            width: 48%;
+            background-color: var(--project-background);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .project-info {
+            font-weight: bold;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--hero-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-info .button {
+            background: var(--background-color);
+            padding: 5px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--hero-text);
+        }
     </style>
 </head>
 
@@ -110,6 +156,23 @@
                 <h1>Visual Designer Based in Indonesia</h1>
                 <p>I'm a UI/UX designer passionate about creating designs that not only meet the functional requirements
                     but also delight users and evoke emotional connections.</p>
+            </section>
+
+            <section class="projects">
+                <div class="project">
+                    <img src="first.png" alt="Branding Project 1">
+                    <div class="project-info">
+                        <span>Branding Project</span>
+                        <a href="#" class="button">→</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="second.png" alt="Branding Project 2">
+                    <div class="project-info">
+                        <span>Branding Project</span>
+                        <a href="#" class="button">→</a>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
